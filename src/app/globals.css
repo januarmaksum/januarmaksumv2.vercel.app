@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-darkBg dark:text-darkText dark:border-darkBorder bg-bg text-text;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    @apply font-heading;
+  }
+}
