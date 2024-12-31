@@ -5,7 +5,7 @@ import { Moon, Sun } from "@/components/icons";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export default function ThemeSwitch() {
+export default function CE_ThemeSwitch() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -13,7 +13,13 @@ export default function ThemeSwitch() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return (
+      <Button>
+        <div className="w-4 h-4"></div>
+      </Button>
+    );
+  }
 
   const onToggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
